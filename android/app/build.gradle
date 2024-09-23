@@ -8,12 +8,9 @@ plugins {
     id "dev.flutter.flutter-gradle-plugin"
 }
 
-implementation 'com.google.android.gms:play-services-auth:19.0.0'
-
 android {
     namespace = "com.example.newapps"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    compileSdk = 34 // সর্বশেষ compileSdk সংস্করণ ব্যবহার করুন
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -25,21 +22,16 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.newapps"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = 23
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        targetSdk = 34 // সর্বশেষ targetSdk সংস্করণ ব্যবহার করুন
+        versionCode = 1 // আপনার অ্যাপ্লিকেশনের সংস্করণ কোড
+        versionName = "1.0" // আপনার অ্যাপ্লিকেশনের সংস্করণ নাম
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.debug
+            signingConfig = signingConfigs.debug // ডিবাগ সাইনিং কনফিগারেশন
         }
     }
 }

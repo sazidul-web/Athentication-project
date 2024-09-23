@@ -6,7 +6,6 @@ import 'package:newapps/firebase_options.dart';
 void main() async {
 // Flutter apps are protuti...........=========================== ??
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
 // Firebase are connection ............========================== ??
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,

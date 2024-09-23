@@ -188,7 +188,7 @@ class _LoginpageState extends State<Loginpage> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          AuthMethods().signInWithGoogle();
+                          AuthMethods().signInWithGoogle(context);
                         },
                         child: Image.asset(
                           'assets/google.png',
